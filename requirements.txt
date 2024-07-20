@@ -5,3 +5,5 @@ openai
 pypdf
 tiktoken
 chromadb
+langchain-openai
+

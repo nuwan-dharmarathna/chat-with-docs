@@ -5,9 +5,9 @@ _ = load_dotenv(find_dotenv())
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
@@ -97,5 +97,5 @@ chain = ConversationalRetrievalChain.from_llm(
 )
 
 question = "Give me a summary of this content."
-result = chain({"question": question})
+result = chain.invoke({"question": question})
 print(result['answer'])
