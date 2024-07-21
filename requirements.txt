@@ -6,4 +6,6 @@ pypdf
 tiktoken
 chromadb
 langchain-openai
+streamlit
+langchain-experimental
 
