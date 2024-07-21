@@ -8,4 +8,6 @@ chromadb
 langchain-openai
 streamlit
 langchain-experimental
+tabulate
+
 
