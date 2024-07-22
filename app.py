@@ -1,6 +1,7 @@
 import streamlit as st
 
 from chat_with_pdf import pdf_chat
+from chat_with_website import website_chat
 
 def init():
     st.set_page_config(
@@ -36,7 +37,7 @@ def side_bar_option():
         if website_url is None or website_url == "":
             st.info("Please enter your website URL")
         else:
-            pass
+            website_chat(website_url)
         
     elif option == "Chat with CSV 📈":
         with st.sidebar:
