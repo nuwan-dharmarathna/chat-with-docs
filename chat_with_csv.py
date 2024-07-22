@@ -16,7 +16,6 @@ def get_response(file, user_query):
     agent = create_csv_agent(
         llm,
         file,
-        verbose=True,
         allow_dangerous_code=True
     )
     

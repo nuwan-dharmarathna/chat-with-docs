@@ -18,7 +18,7 @@ def side_bar_option():
     with st.sidebar:
         option = st.selectbox(
             "Select your Option", 
-            ["Chat with PDF 📃", "Chat with Website 🌐", "Chat with CSV 📈", "Chat with mySQL DB 🐬"],
+            ["Chat with PDF 📃", "Chat with Website 🌐", "Chat with CSV 📈"],
             )
     
     if option == "Chat with PDF 📃":
@@ -47,15 +47,6 @@ def side_bar_option():
             st.info("Please upload your CSV file")
         else:
             csv_chat(file)
-    
-    elif option == "Chat with mySQL DB 🐬":
-        with st.sidebar:
-            db_name = st.text_input("Database Name")
-            db_user = st.text_input("Database User")
-            db_password = st.text_input("Database Password", type="password")
-            db_host = st.text_input("Database Host")
-            db_port = st.text_input("Database Port")
-            st.button("Connect")
 
 def main():
     
