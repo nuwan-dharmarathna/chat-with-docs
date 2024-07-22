@@ -72,7 +72,6 @@ def get_response(user_query):
     
     return response['answer']
 
-
 def website_chat(website_url):
     
     #session state chat history

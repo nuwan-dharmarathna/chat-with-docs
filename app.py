@@ -2,6 +2,7 @@ import streamlit as st
 
 from chat_with_pdf import pdf_chat
 from chat_with_website import website_chat
+from chat_with_csv import csv_chat
 
 def init():
     st.set_page_config(
@@ -45,7 +46,7 @@ def side_bar_option():
         if file is None:
             st.info("Please upload your CSV file")
         else:
-            pass
+            csv_chat(file)
     
     elif option == "Chat with mySQL DB 🐬":
         with st.sidebar:
