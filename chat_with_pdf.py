@@ -41,8 +41,6 @@ def get_vector_store_from_pdf(file):
         embedding,
     )
     
-    print(vector_store._collection.count())
-    
     return vector_store
 
 def get_context_retriver_chain(vector_store):
